@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- My CSS -->
+  <link rel="stylesheet" href="./css//main.css" />
+</head>
+
+<body>
+  <section class="home">
+    <div class="home-left">
+      <div class="navbar">
+        <div class="home-left-logo">PNH</div>
+        <div class="home-left-menu">
+          <ul>
+            <li><a href="#" id="1" class="selected"  onclick="handleClick('home-page', '1')"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="#" id="2" onclick="handleClick('about-page', '2')"><i class="fas fa-address-card"></i><span>About</span></a></li>
+            <li><a href="#" id="3" onclick="handleClick('project-page', '3')"><i class="fas fa-project-diagram"></i><span>Project</span></a></li>
+            <li><a href="#" id="4" onclick="handleClick('contact-page', '4')"><i class="fas fa-mail-bulk"></i><span>Contact</span></a></li>
+          </ul>
+        </div>
+        <div class="home-left-copyright">
+          <p>
+            © 2021 Ho Chi Minh <br />
+            Created by<a href="#" target="_blank"> NHP</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="home-right">
+      <div id="home-page" class="home-right-cover">
+        <div class="home-right-avt">
+          <div class="avt-img"></div>
+        </div>
+        <div class="home-right-details">
+          <h3 class="name">Hoang Phuc</h3>
+          <p class="job">
+            Creative Photographer based in New York and happy to travel all
+            over Europe to capture photos.
+          </p>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/phuc.nguyenhoang28" target="_blank" rel="noreferrer">
+                <img class="svg" src="./img/social/facebook.svg" alt="social" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/phut.exe/" target="_blank" rel="noreferrer"><img class="svg"
+                src="./img/social/instagram.svg" alt="social" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/phut.exe/" target="_blank" rel="noreferrer"><img class="svg"
+                  src="./img/social/dribbble.svg" alt="social" /></a>
+            </li>
+            <li>
+              <a href="https://vm.tiktok.com/ZSer4nb4x/" target="_blank" rel="noreferrer"><img class="svg"
+                  src="./img/social/tik-tok.svg" alt="social" /></a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer"><img class="svg"
+                  src="./img/social/twitter.svg" alt="social" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="about-page" class="not-selected">
+        <div class="about">about</div>
+      </div>
+      <div id="project-page" class="not-selected">project</div>
+      <div id="contact-page" class="not-selected">contact</div>
+    </div>
+    
+  </section>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="js/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.not-selected {
+    display: none !important;
+}
+.home {
+    .selected {
+        color: black !important;
+        letter-spacing: 2px !important;
+    }
+}
+@media (max-width: 1200px) {
+    .home {
+        .selected {
+            letter-spacing: unset !important;
+        }
+    }
+}

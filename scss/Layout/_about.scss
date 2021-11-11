@@ -1,0 +1,12 @@
+.home {
+    .home-right {
+        .about {
+            @include center();
+            width: 100px;
+            animation-name: right;
+            animation-duration: 1.2s;
+            animation-fill-mode: forwards;
+            opacity:0;
+        }
+    }
+}
