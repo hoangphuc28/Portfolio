@@ -389,7 +389,7 @@ footer a {
 
 @keyframes right {
   from {
-    transform: translatex(-120px);
+    transform: translatex(-100px);
   }
   to {
     transform: translatex(0);
@@ -425,6 +425,7 @@ footer a {
     display: none;
   }
   .home .home-left .navbar .home-left-menu ul li a i {
+    font-size: 16px;
     margin-left: 15px;
     margin-right: 0;
   }
@@ -489,14 +490,173 @@ footer a {
 }
 
 .home .home-right .about {
+  width: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
   animation-name: right;
   animation-duration: 1.2s;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+.home .home-right .about .about-cover {
+  width: 100%;
+}
+
+.home .home-right .about .about-cover h1 {
+  font-size: 25px;
+  margin: 20px 0;
+  color: black;
+}
+
+.home .home-right .about .about-cover .about-cover-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.home .home-right .about .about-cover .about-cover-block .about-left {
+  width: 50%;
+  margin-right: 50px;
+}
+
+.home .home-right .about .about-cover .about-cover-block .about-left p {
+  font-style: italic;
+}
+
+.home .home-right .about .about-cover .about-cover-block .about-right ul li {
+  list-style: none;
+}
+
+.home .home-right .about .about-cover .about-cover-block .about-right ul li p span {
+  display: inline-block;
+  min-width: 100px;
+  color: black;
+  font-weight: 600;
+}
+
+.home .home-right .about .about-cover .about-skill {
+  display: flex;
+  margin-top: 60px;
+  position: relative;
+  width: 3%;
+  transition: 0.6s cubic-bezier(0.6, 0.01, 0, 1);
+  height: 30px;
+  /*  .list-skill {
+                        @include center();
+
+                    } */
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill div:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #767676;
+  display: block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  box-shadow: 0 0 0 3px #76767669, 0 0 0 6px #7676764b, 0 0 0 12px #7676761c;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill div {
+  transition: .7s;
+  opacity: 0;
+  position: absolute;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill div:first-child {
+  top: -30px;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill div:nth-child(odd):after {
+  bottom: -22px;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill div:nth-child(2) {
+  bottom: -30px;
+  left: 25%;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill div:nth-child(even):after {
+  top: -23px;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill div:nth-child(3) {
+  top: -30px;
+  left: 50%;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill div:last-child {
+  bottom: -30px;
+  left: 75%;
+}
+
+.home .home-right .about .about-cover .about-skill .list-skill:after {
+  z-index: 0;
+  transition: all .5s;
+  content: '';
+  background-color: black;
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.home .home-right .about .about-cover .about-skill button {
+  font-size: 20px;
+  top: 0;
+  bottom: 50px;
+  margin: auto;
+  right: -7px;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.home .home-right .about .about-cover .about-skill:hover {
+  width: 100%;
+}
+
+.home .home-right .about .about-cover .about-skill:hover .list-skill div {
+  transition-delay: .3s;
+  opacity: 1;
+}
+
+.home .home-right .about .about-cover .about-skill:hover .list-skill:after {
+  transform: translatex(15px);
+}
+
+@media (max-width: 1040px) {
+  .home .home-right .about {
+    width: auto;
+  }
+  .home .home-right .about .about-cover h1 {
+    margin: 0;
+  }
+  .home .home-right .about .about-cover .about-cover-block {
+    display: block;
+  }
+  .home .home-right .about .about-cover .about-cover-block .about-left {
+    width: 100%;
+  }
+  .home .home-right .about .about-cover .about-cover-block .about-left p {
+    margin: 25px 0;
+  }
 }
 
 .not-selected {
