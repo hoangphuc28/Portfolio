@@ -74,7 +74,6 @@
        
     }
     .home-right {
-        overflow: scroll;
         @include center();
         background: #f8f8f8;
         width: 73%;
@@ -168,6 +167,13 @@
         transform: translatex(0);
         opacity: 1;
     
+    }
+}
+@media (min-width: 1200px) {
+    .home {
+        .home-right {
+            overflow: scroll;
+        }
     }
 }
 @media (max-width: 1200px) {

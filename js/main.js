@@ -47,9 +47,18 @@ const handleScrollAnimation = () => {
   })
 }
 handleScrollAnimation();
+if(window.innerWidth >= 1200) {
+  hr.addEventListener("scroll", () => { 
+    throttle(() => {
+      handleScrollAnimation();
+    }, 250);
+  });
+}
+else {
+  window.addEventListener("scroll", () => { 
+    throttle(() => {
+      handleScrollAnimation();
+    }, 250);
+  });
+}
 
-hr.addEventListener("scroll", () => { 
-  throttle(() => {
-    handleScrollAnimation();
-  }, 250);
-});

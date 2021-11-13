@@ -245,7 +245,6 @@ footer a {
 }
 
 .home .home-right {
-  overflow: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,6 +347,12 @@ footer a {
   to {
     transform: translatex(0);
     opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home .home-right {
+    overflow: scroll;
   }
 }
 
