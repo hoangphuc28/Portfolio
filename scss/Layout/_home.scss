@@ -74,6 +74,7 @@
        
     }
     .home-right {
+        overflow: scroll;
         @include center();
         background: #f8f8f8;
         width: 73%;
@@ -160,6 +161,7 @@
 @keyframes right {
     from {
         transform: translatex(-100px);
+        opacity: 0;
 
     }
     to {
@@ -221,7 +223,6 @@
     .home {
         .home-right {
             padding: 100px 40px;
-            height: auto;
             display: block;
             .home-right-cover {
                 width: auto;

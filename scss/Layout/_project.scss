@@ -1,0 +1,121 @@
+@mixin button($border: none, $background-color: black, $color: white, $padding: 10px 40px) {
+    border:  $border;
+    background-color: $background-color;
+    color: $color;
+    padding: $padding;
+}
+.scrolled {
+    animation-name: right;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+.js-scroll.scrolled {
+    opacity: 1;
+  }
+
+.home {
+    .home-right {
+        .project {
+            height:70%;
+            width: 85%;
+            @include center();
+         
+            .project-cover {
+                height: 100%;
+                width: 100%;
+                .title {
+                    margin-bottom: 50px;
+                    font-size: 30px;
+                    color: black;
+                }
+                .project-content {
+                    padding-bottom: 50px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 70px;
+                    .project-item {
+                    
+                        box-shadow: 0 0 20px #dfdfdf;
+                        background-color: white;
+                        .project-item-img {
+                            cursor: pointer;
+                            overflow: hidden;
+                            img {
+                                transform: scale(1);
+                                transition: all .3s;
+                                width: 100%;
+                            }
+                        }
+                        .project-item-img:hover img  {
+                            transform: scale(1.03);
+                        }
+                        .project-item-content {
+                            padding: 30px;
+                            .item-content-copyright {
+                                font-style: italic;
+                            }
+                            .item-content-copyright:after {
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #939393;
+                            }
+                            .item-content-describe {
+                                margin: 15px 0;
+                                color: black;
+                            }
+                            button {
+                                transition: all .3s;
+                                @include button();
+                                a {
+                                    height: 100%;
+                                    font-weight: 500;
+                                    transition: all .3s;
+                                    color: white;
+                                    text-decoration: none;
+                                }
+                            }
+                            button:hover a {
+                                letter-spacing: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+}
+@media (max-width:1040px) {
+    .home {
+        .home-right {
+            .project {
+                width: 100%;
+                .project-cover {
+                    .project-content {
+                        grid-gap: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 764px) {
+    .home {
+        .home-right {
+            .project {
+                width: 100%;
+                .project-cover {
+                    .project-content {
+                        grid-template-columns: repeat(1, 1fr);
+ 
+                        .project-item {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

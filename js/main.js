@@ -1,6 +1,5 @@
 const scrollElements = document.querySelectorAll(".js-scroll");
-const throttleCount = document.getElementById('throttle-count');
-const scrollCount = document.getElementById('scroll-count');
+const hr = document.getElementById('hr')
 
 var throttleTimer;
 
@@ -13,12 +12,12 @@ const throttle = (callback, time) => {
   }, time);
 }
 
-const elementInView = (el, dividend = 1) => {
+const elementInView = (el) => {
   const elementTop = el.getBoundingClientRect().top;
 
   return (
     elementTop <=
-    (window.innerHeight) / dividend
+    (window.innerHeight)
   );
 };
 
@@ -26,7 +25,7 @@ const elementOutofView = (el) => {
   const elementTop = el.getBoundingClientRect().top;
 
   return (
-    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+    elementTop > (window.innerHeight)
   );
 };
 
@@ -40,21 +39,17 @@ const hideScrollElement = (element) => {
 
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
-    if (elementInView(el, 1.25)) {
+    if (elementInView(el)) {
       displayScrollElement(el);
     } else if (elementOutofView(el)) {
       hideScrollElement(el)
     }
   })
 }
-var timer=0;
-var count=0;
-var scroll = 0;
+handleScrollAnimation();
 
-window.addEventListener("scroll", () => { 
-  scrollCount.innerHTML = scroll++;
+hr.addEventListener("scroll", () => { 
   throttle(() => {
     handleScrollAnimation();
-    throttleCount.innerHTML = count++;
   }, 250);
 });

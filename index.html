@@ -26,10 +26,14 @@
         <div class="home-left-logo">PNH</div>
         <div class="home-left-menu">
           <ul>
-            <li><a href="#" id="1" class="selected"  onclick="handleClick('home-page', '1')"><i class="fas fa-home"></i><span>Home</span></a></li>
-            <li><a href="#" id="2" onclick="handleClick('about-page', '2')"><i class="fas fa-address-card"></i><span>About</span></a></li>
-            <li><a href="#" id="3" onclick="handleClick('project-page', '3')"><i class="fas fa-project-diagram"></i><span>Project</span></a></li>
-            <li><a href="#" id="4" onclick="handleClick('contact-page', '4')"><i class="fas fa-mail-bulk"></i><span>Contact</span></a></li>
+            <li><a href="#" id="1" class="selected" onclick="handleClick('home-page', '1')"><i
+                  class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="#" id="2" onclick="handleClick('about-page', '2')"><i
+                  class="fas fa-address-card"></i><span>About</span></a></li>
+            <li><a href="#" id="3" onclick="handleClick('project-page', '3')"><i
+                  class="fas fa-project-diagram"></i><span>Project</span></a></li>
+            <li><a href="#" id="4" onclick="handleClick('contact-page', '4')"><i
+                  class="fas fa-mail-bulk"></i><span>Contact</span></a></li>
           </ul>
         </div>
         <div class="home-left-copyright">
@@ -40,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="home-right">
+    <div class="home-right" id="hr">
       <div id="home-page" class="home-right-cover">
         <div class="home-right-avt">
           <div class="avt-img"></div>
@@ -59,7 +63,7 @@
             </li>
             <li>
               <a href="https://www.instagram.com/phut.exe/" target="_blank" rel="noreferrer"><img class="svg"
-                src="./img/social/instagram.svg" alt="social" />
+                  src="./img/social/instagram.svg" alt="social" />
               </a>
             </li>
             <li>
@@ -81,54 +85,136 @@
         <div class="about-cover">
           <h1>Adriano Smith & Photographer</h1>
           <div class="about-cover-block">
-          <div class="about-left">
-            <p>Hello, I am a creative photographer based in New York and happy to travel all over Europe to capture your big day in candid and authentic photos. I will create a lasting memory of the people.</p>
+            <div class="about-left">
+              <p>Hello, I am a creative photographer based in New York and happy to travel all over Europe to capture
+                your big day in candid and authentic photos. I will create a lasting memory of the people.</p>
+            </div>
+            <div class="about-right">
+              <ul>
+                <li>
+                  <p><span>Birthday:</span>28.01.2002</p>
+                </li>
+                <li>
+                  <p><span>Age:</span>19</p>
+                </li>
+                <li>
+                  <p><span>Address:</span>Ho Chi Minh</p>
+                </li>
+                <li>
+                  <p><span>Email:</span>nguyenhoangphucc7@gmail.com</p>
+                </li>
+                <li>
+                  <p><span>Phone:</span>0948 *** ***</p>
+                </li>
+                <li>
+                  <p><span>Study:</span>HUTECH</p>
+                </li>
+                <li>
+                  <p><span>Freelance:</span>Available</p>
+                </li>
+              </ul>
+            </div>
+
           </div>
-          <div class="about-right">
-            <ul>
-              <li>
-                <p><span>Birthday:</span>28.01.2002</p>
-              </li>
-              <li>
-                <p><span>Age:</span>19</p>
-              </li>
-              <li>
-                <p><span>Address:</span>Ho Chi Minh</p>
-              </li>
-              <li>
-                <p><span>Email:</span>nguyenhoangphucc7@gmail.com</p>
-              </li>
-              <li>
-                <p><span>Phone:</span>0948 *** ***</p>
-              </li>
-              <li>
-                <p><span>Study:</span>HUTECH</p>
-              </li>
-              <li>
-                <p><span>Freelance:</span>Available</p>
-              </li>
-            </ul>
+          <button class="button-skill">Skill</button>
+          <div class="about-skill">
+            <div class="list-skill">
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>JS</div>
+              <div>ReactJS</div>
+            </div>
           </div>
 
         </div>
-        <div class="about-skill">
-          <div class="list-skill">
-            <div>HTML</div>
-            <div>CSS</div>
-            <div>JS</div>
-            <div>ReactJS</div>
+      </div>
+      <div id="project-page" class="not-selected project">
+        <div class="project-cover">
+          <div class="title">
+            <h3>Project</h3>
           </div>
-          <button>Skill</button>
+          <div class="project-content">
+            <div class="project-item js-scroll">
+              <div class="project-item-img">
+                <img src="./img/bike.png" alt="">
+              </div>
+              <div class="project-item-content">
+                <div class="item-content-copyright">By Hoang Phuc</div>
+                <div class="item-content-describe">
+                  <h3>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                </div>
+                <button class="visit-web"><a href="https://zhoangp.github.io/Bike__Project__NHP/"
+                    target="_blank">Visit</a></button>
+              </div>
+            </div>
+            <div class="project-item js-scroll">
+              <div class="project-item-img">
+                <img src="./img/hotflix.png" alt="">
+              </div>
+              <div class="project-item-content">
+                <div class="item-content-copyright">By Hoang Phuc</div>
+                <div class="item-content-describe">
+                  <h3>Lorem ipsum dolor sit amet consectetur,
+                  </h3>
+                </div>
+                <button class="visit-web"><a href="https://movie-wheat.vercel.app/" target="_blank">Visit</a></button>
+              </div>
+            </div>
+            <div class="project-item js-scroll">
+              <div class="project-item-img">
+                <img src="./img/bike.png" alt="">
+              </div>
+              <div class="project-item-content">
+                <div class="item-content-copyright">By Hoang Phuc</div>
+                <div class="item-content-describe">
+                  <h3>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                </div>
+                <button class="visit-web"><a href="https://zhoangp.github.io/Bike__Project__NHP/"
+                    target="_blank">Visit</a></button>
+              </div>
+            </div>
+            <div class="project-item js-scroll">
+              <div class="project-item-img">
+                <img src="./img/bike.png" alt="">
+              </div>
+              <div class="project-item-content">
+                <div class="item-content-copyright">By Hoang Phuc</div>
+                <div class="item-content-describe">
+                  <h3>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                </div>
+                <button class="visit-web"><a href="https://zhoangp.github.io/Bike__Project__NHP/"
+                    target="_blank">Visit</a></button>
+              </div>
+            </div>
+            <div class="project-item js-scroll">
+              <div class="project-item-img">
+                <img src="./img/bike.png" alt="">
+              </div>
+              <div class="project-item-content">
+                <div class="item-content-copyright">By Hoang Phuc</div>
+                <div class="item-content-describe">
+                  <h3>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                </div>
+                <button class="visit-web"><a href="https://zhoangp.github.io/Bike__Project__NHP/"
+                    target="_blank">Visit</a></button>
+              </div>
+            </div>
 
-
+          </div>
         </div>
-
-        </div>
-        </div>
-      <div id="project-page" class="not-selected">project</div>
+      </div>
       <div id="contact-page" class="not-selected">contact</div>
     </div>
-    
+   
+
   </section>
 
   <!-- Optional JavaScript -->
@@ -143,6 +229,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   <script src="js/navbar.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

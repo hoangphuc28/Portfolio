@@ -39,11 +39,17 @@
                         }
                     }
                 }
+                .button-skill {
+                    font-size: 20px;
+                    margin: 40px 0;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                }
                 .about-skill {
                     display: flex;
-                    margin-top: 60px;
                     position: relative;
-                    width: 3%;
+                    width: 0%;
                     transition: .6s cubic-bezier(.6,.01,0,1);
                     height: 30px;
                     .list-skill {
@@ -76,18 +82,18 @@
                         }
                         div:nth-child(2) {
                             bottom: -30px;
-                            left: 25%;
+                            left: 33%;
                         }
                         div:nth-child(even):after {
                             top: -23px;
                         }
                         div:nth-child(3) {
                             top: -30px;
-                            left: 50%;
+                            right: 33%;
                         }
                         div:last-child {
                             bottom: -30px;
-                            left: 75%;
+                            right: 0%;
                         }
                     }
                     .list-skill:after {
@@ -103,24 +109,14 @@
                         bottom:0;
                         margin: auto;
                     }
-                    button {
-                        font-size: 20px;
-                        top:0;
-                        bottom:50px;
-                        margin: auto;
-                        right: -7px;
-                        position: absolute;
-                        background:none;
-                        border: none;
-                        cursor: pointer;
-                    }
+                    
                    /*  .list-skill {
                         @include center();
 
                     } */
                     
                 }
-                .about-skill:hover {
+                .button-skill:hover + .about-skill {
                     width: 100%;
                     .list-skill {
                         div {
@@ -128,9 +124,9 @@
                             opacity: 1;
                         }
                     }
-                    .list-skill:after{
+                   /*  .list-skill:after{
                         transform: translatex(15px);
-                    }
+                    } */
                 }
                
                
@@ -154,6 +150,26 @@
                             width: 100%;
                             p {
                                 margin: 25px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 420px) {
+    .home {
+        .home-right {
+            .about {
+                .about-cover {
+                    h1 {
+                        text-align: center;
+                    }
+                    .about-cover-block {
+                        .about-left {
+                            p {
+                                text-align: center;
                             }
                         }
                     }
