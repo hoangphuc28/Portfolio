@@ -17,7 +17,7 @@ const elementInView = (el) => {
 
   return (
     elementTop <=
-    (window.innerHeight)
+    (window.innerHeight)/1.25
   );
 };
 
@@ -25,12 +25,13 @@ const elementOutofView = (el) => {
   const elementTop = el.getBoundingClientRect().top;
 
   return (
-    elementTop > (window.innerHeight)
+    elementTop > (window.innerHeight) / 1.25
   );
 };
 
 const displayScrollElement = (element) => {
   element.classList.add("scrolled");
+
 };
 
 const hideScrollElement = (element) => {
@@ -46,7 +47,28 @@ const handleScrollAnimation = () => {
     }
   })
 }
-handleScrollAnimation();
+function hand(name, id) {
+  console.log(1)
+  unhandle();
+  handleClick(name, id)
+  handle();
+}
+const unhandle = () => {
+  scrollElements.forEach(item => {
+    if (item.classList.contains('scrolled')) {
+      hideScrollElement(item)
+    }
+  })
+}
+const handle = () => {
+  scrollElements.forEach(item => {
+    const height = window.innerHeight/1.25
+    if(item.getBoundingClientRect().top < height) {
+      displayScrollElement(item)
+    }
+  })
+}
+
 if(window.innerWidth >= 1200) {
   hr.addEventListener("scroll", () => { 
     throttle(() => {
