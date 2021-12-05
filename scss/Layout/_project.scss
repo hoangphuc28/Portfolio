@@ -1,5 +1,5 @@
 @mixin button($border: none, $background-color: black, $color: white, $padding: 10px 40px) {
-    border:  $border;
+    border: $border;
     background-color: $background-color;
     color: $color;
     padding: $padding;
@@ -12,59 +12,82 @@
 .home {
     .home-right {
         .project {
-            height:70%;
+            height: 70%;
             width: 85%;
             @include center();
-         
+
             .project-cover {
                 height: 100%;
                 width: 100%;
+
                 .title {
                     margin-bottom: 50px;
                     font-size: 30px;
                     color: black;
                 }
+
                 .project-content {
                     padding-bottom: 50px;
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-gap: 70px;
+
                     .project-item.scrolled {
-                        transition-duration:  1.2s;
-                        transition-timing-function:  ease;
-                         opacity: 1;
-                         transform: none;
-                     }
-                     .project-item:nth-child(even) {
-                         transition-delay: 0.3s;
-                     }
-                     .project-item:nth-child(odd) {
+                        transition-duration: 1.3s;
+                        transition-timing-function: ease;
+                        opacity: 1;
+                        transform: none;
+                    }
+
+                    /*  .project-item:nth-child(even) {
                          transition-delay: 0.2s;
-                     }
+                    }
+                     .project-item:nth-child(odd) {
+                         transition-delay: 0.1s;
+                    } */
                     .project-item {
                         opacity: 0;
-                        transition-duration:  1.2s;
-                        transition-timing-function:  ease;
+                        transition-duration: 1.3s;
+                        transition-timing-function: ease;
                         transform: translatex(-100px);
                         box-shadow: 0 0 20px #dfdfdf;
                         background-color: white;
+
                         .project-item-img {
+                            position: relative;
                             cursor: pointer;
                             overflow: hidden;
+                            .image {
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                transition: all .3s ease-in-out;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                            }
                             img {
-                                transform: scale(1);
-                                transition: all .3s;
+                                opacity: 0;
                                 width: 100%;
                             }
                         }
-                        .project-item-img:hover img  {
-                            transform: scale(1.03);
+                       
+
+                        .project-item-img:hover  {
+                            .image {
+                                transform: scale(1.05);
+                            }
                         }
+
                         .project-item-content {
                             padding: 30px;
+
                             .item-content-copyright {
                                 font-style: italic;
                             }
+
                             .item-content-copyright:after {
                                 content: '';
                                 display: block;
@@ -72,13 +95,16 @@
                                 height: 1px;
                                 background-color: #939393;
                             }
+
                             .item-content-describe {
                                 margin: 15px 0;
                                 color: black;
                             }
+
                             button {
                                 transition: all .3s;
                                 @include button();
+
                                 a {
                                     height: 100%;
                                     font-weight: 500;
@@ -87,22 +113,40 @@
                                     text-decoration: none;
                                 }
                             }
+
                             button:hover a {
                                 letter-spacing: 2px;
+                            }
+                        }
+                      
+                    }
+                    .project-item:first-child {
+                        .project-item-img {
+                            .image {
+                                background-image: url('../../img/bike.png');
+                            }
+                        }
+                    }
+                    .project-item:nth-child(2) {
+                        .project-item-img {
+                            .image {
+                                background-image: url('../../img/hotflix.png');
                             }
                         }
                     }
                 }
             }
-           
+
         }
     }
 }
+
 @media (max-width:1040px) {
     .home {
         .home-right {
             .project {
                 width: 100%;
+
                 .project-cover {
                     .project-content {
                         grid-gap: 40px;
@@ -112,11 +156,13 @@
         }
     }
 }
+
 @media (max-width: 764px) {
     .home {
         .home-right {
             .project {
                 width: 100%;
+
                 .project-cover {
                     .project-content {
                         grid-template-columns: repeat(1, 1fr);

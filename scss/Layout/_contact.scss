@@ -1,0 +1,40 @@
+.home {
+    .home-right {
+        .contact {
+            width: 85%;
+            @include center();
+            animation-name: right;
+            animation-duration: 1.2s;
+            animation-fill-mode: forwards;
+            opacity:0;
+            .contact-cover {
+                width: 100%;
+                .title {
+                    margin-bottom: 50px;
+                    font-size: 30px;
+                    color: black;
+                }
+                .contact-map {
+                    width: 100%;
+                }
+            }
+            
+        } 
+    }
+}
+@media (max-width: 1200px) {
+    .home {
+        .home-right {
+            .contact {
+                width: 100%;
+             
+                .contact-cover {
+                   
+                    .contact-map {
+                    }
+                }
+                
+            } 
+        }
+    }
+}

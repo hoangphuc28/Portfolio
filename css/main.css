@@ -58,7 +58,7 @@ figure {
 
 .home .home-left .navbar .home-left-menu ul li {
   line-height: 18px;
-  transition: all .2s;
+  transition: all .4s;
   cursor: pointer;
   display: flex;
   margin-top: 30px;
@@ -71,8 +71,10 @@ figure {
 }
 
 .home .home-left .navbar .home-left-menu ul li a {
+  transition: all .4s;
   text-decoration: none;
   color: #767676;
+  letter-spacing: normal;
 }
 
 .home .home-left .navbar .home-left-menu ul li:first-child {
@@ -355,19 +357,10 @@ figure {
   font-weight: 600;
 }
 
-.home .home-right .about .about-cover .button-skill {
-  font-size: 20px;
-  margin: 40px 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
 .home .home-right .about .about-cover .about-skill {
+  margin-top: 60px;
   display: flex;
   position: relative;
-  width: 0%;
-  transition: 0.6s cubic-bezier(0.6, 0.01, 0, 1);
   height: 30px;
   /*  .list-skill {
                         @include center();
@@ -397,7 +390,7 @@ figure {
 
 .home .home-right .about .about-cover .about-skill .list-skill div {
   transition: .7s;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
 }
 
@@ -508,26 +501,24 @@ figure {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 70px;
+  /*  .project-item:nth-child(even) {
+                         transition-delay: 0.2s;
+                    }
+                     .project-item:nth-child(odd) {
+                         transition-delay: 0.1s;
+                    } */
 }
 
 .home .home-right .project .project-cover .project-content .project-item.scrolled {
-  transition-duration: 1.2s;
+  transition-duration: 1.3s;
   transition-timing-function: ease;
   opacity: 1;
   transform: none;
 }
 
-.home .home-right .project .project-cover .project-content .project-item:nth-child(even) {
-  transition-delay: 0.3s;
-}
-
-.home .home-right .project .project-cover .project-content .project-item:nth-child(odd) {
-  transition-delay: 0.2s;
-}
-
 .home .home-right .project .project-cover .project-content .project-item {
   opacity: 0;
-  transition-duration: 1.2s;
+  transition-duration: 1.3s;
   transition-timing-function: ease;
   transform: translatex(-100px);
   box-shadow: 0 0 20px #dfdfdf;
@@ -535,18 +526,30 @@ figure {
 }
 
 .home .home-right .project .project-cover .project-content .project-item .project-item-img {
+  position: relative;
   cursor: pointer;
   overflow: hidden;
 }
 
+.home .home-right .project .project-cover .project-content .project-item .project-item-img .image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .home .home-right .project .project-cover .project-content .project-item .project-item-img img {
-  transform: scale(1);
-  transition: all .3s;
+  opacity: 0;
   width: 100%;
 }
 
-.home .home-right .project .project-cover .project-content .project-item .project-item-img:hover img {
-  transform: scale(1.03);
+.home .home-right .project .project-cover .project-content .project-item .project-item-img:hover .image {
+  transform: scale(1.05);
 }
 
 .home .home-right .project .project-cover .project-content .project-item .project-item-content {
@@ -590,6 +593,14 @@ figure {
   letter-spacing: 2px;
 }
 
+.home .home-right .project .project-cover .project-content .project-item:first-child .project-item-img .image {
+  background-image: url("../../img/bike.png");
+}
+
+.home .home-right .project .project-cover .project-content .project-item:nth-child(2) .project-item-img .image {
+  background-image: url("../../img/hotflix.png");
+}
+
 @media (max-width: 1040px) {
   .home .home-right .project {
     width: 100%;
@@ -605,6 +616,37 @@ figure {
   }
   .home .home-right .project .project-cover .project-content {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.home .home-right .contact {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: right;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.home .home-right .contact .contact-cover {
+  width: 100%;
+}
+
+.home .home-right .contact .contact-cover .title {
+  margin-bottom: 50px;
+  font-size: 30px;
+  color: black;
+}
+
+.home .home-right .contact .contact-cover .contact-map {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .home .home-right .contact {
+    width: 100%;
   }
 }
 

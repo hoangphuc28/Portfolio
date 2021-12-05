@@ -39,18 +39,10 @@
                         }
                     }
                 }
-                .button-skill {
-                    font-size: 20px;
-                    margin: 40px 0;
-                    border: none;
-                    background: none;
-                    cursor: pointer;
-                }
                 .about-skill {
+                    margin-top: 60px;
                     display: flex;
                     position: relative;
-                    width: 0%;
-                    transition: .6s cubic-bezier(.6,.01,0,1);
                     height: 30px;
                     .list-skill {
                         width: 100%;
@@ -71,7 +63,7 @@
                         }
                         div {
                             transition: .7s;
-                            opacity: 0;
+                            opacity: 1;
                             position: absolute;
                         }
                         div:first-child {

@@ -48,7 +48,6 @@ const handleScrollAnimation = () => {
   })
 }
 function hand(name, id) {
-  console.log(1)
   unhandle();
   handleClick(name, id)
   handle();
