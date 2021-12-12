@@ -185,7 +185,18 @@ figure {
   transition: all .4s;
 }
 
+.home .home-right .home-right-cover .home-right-details ul li a i {
+  font-size: 20px;
+  color: black;
+  transition: all .4s;
+}
+
 .home .home-right .home-right-cover .home-right-details ul li a img:hover {
+  opacity: .6;
+  transform: translatey(-5px);
+}
+
+.home .home-right .home-right-cover .home-right-details ul li a i:hover {
   opacity: .6;
   transform: translatey(-5px);
 }

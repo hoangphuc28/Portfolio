@@ -135,7 +135,17 @@
                                     height: 17px;
                                     transition: all .4s;
                                 }
+                                i {
+                                    font-size: 20px;
+                                    color: black;
+                                    transition: all .4s;
+
+                                }
                                 img:hover {
+                                    opacity: .6;
+                                    transform: translatey(-5px);
+                                }
+                                i:hover {
                                     opacity: .6;
                                     transform: translatey(-5px);
                                 }
